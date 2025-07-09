@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+	--color-green-primary: #3ee9e5;
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+}
+
+.mobile-header-bg {
+	@apply hidden;
+}
+
+/* Media Query */
+@media (max-width: 1250px) {
+	.features-media-1250px {
+		@apply flex-col;
+	}
+
+	.features-media-1250px li {
+		@apply grid grid-cols-[160px_1fr] grid-rows-2 gap-x-12 items-center pr-40;
+	}
+
+	.features-media-1250px li:nth-child(odd) {
+		@apply ml-15;
+	}
+
+	.features-media-1250px li > div {
+		@apply row-span-2 mb-0;
+	}
+
+	.features-media-1250px li > h3 {
+		@apply mb-0;
+	}
+	.features-media-1250px li > p {
+		@apply self-start;
+	}
+
+	header div > div:first-child {
+		@apply -left-45;
+	}
+
+	header div > div:last-child {
+		@apply -right-45;
+	}
+}
+
+@media (max-width: 1150px) {
+	main section {
+		@apply px-20;
+	}
+}
+
+@media (max-width: 1050px) {
+	header {
+		@apply pb-0;
+	}
+
+	header > div {
+		@apply mt-15;
+	}
+
+	header div > div:first-child {
+		@apply hidden;
+	}
+
+	header div > div:last-child {
+		@apply hidden;
+	}
+
+	.mobile-header-bg {
+		@apply block;
+	}
+}
+
+@media (max-width: 980px) {
+	main section {
+		@apply px-15;
+	}
+
+	.features-media-980px li {
+		@apply pr-0 text-center;
+	}
+}
+
+@media (max-width: 820px) {
+	header > img {
+		@apply pl-20;
+	}
+
+	.header-content-block {
+		@apply px-18;
+	}
+
+	main section {
+		@apply px-10;
+	}
+
+	main section:last-child {
+		@apply flex flex-col items-center;
+	}
+
+	.features-media-820px {
+		@apply gap-15;
+	}
+
+	.features-media-820px li {
+		@apply flex flex-col;
+	}
+
+	.features-media-820px li:nth-child(odd) {
+		@apply ml-0 self-center;
+	}
+
+	.features-media-820px li:nth-child(even) {
+		@apply self-center;
+	}
+
+	.features-media-820px li > h3 {
+		@apply mb-5 mt-10;
+	}
+	.features-media-820px li > p {
+		@apply self-center;
+	}
+
+	.pricing-media-820px {
+		@apply max-w-[445px] flex-col gap-20;
+	}
+}
+
+@media (max-width: 550px) {
+	.header-content-block {
+		@apply px-10;
+	}
+
+	.header-content-block h1 {
+		@apply text-3xl;
+	}
+
+	footer {
+		@apply px-10;
+	}
+
+	form {
+		@apply flex-col gap-8;
+	}
+
+	form input {
+		@apply max-w-[unset] h-[45px];
+	}
+
+	form p {
+		@apply bottom-14 order-2;
+	}
+}
+
+@media (max-width: 450px) {
+	body {
+		@apply p-0;
+	}
+}
+/* End of Media Query */
